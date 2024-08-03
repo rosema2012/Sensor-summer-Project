@@ -1,0 +1,45 @@
+1) Empeze con el entorno de desarrollo pycharm en python, generando una linea en la pantalla
+con puntos que se generan en un espacio de forma aleatoria (Simulando un hardware que detecte
+objetivos) y a la derecha monigotes en la misma posicion
+
+2) Me generaba un monigote por puto pero no respetaba la altura ("distancia") Asi que cambiando unos
+ajustes, los monigotes ya aparecian mas arriba o abajo.
+
+3) Pero no tiene sentido que aparezcan monigotes volando asi que hice un radar 360 en plan sonar
+a la izquierda con puntos alrededor simulando objetos o personas y a la izquierda el monigote
+que simula donde mira la persona, a la derecha solo aparece el monigote que esta dentro del cono
+de vision. (PERO Aun no respeta el grado en el que se encuentra el punto en el cono respecto al
+monigote
+
+4) Una vez el visor visualiza los puntos y su color dependiendo de la distancia y el grado en el que
+se encuentra cada punto respecto al cono de vision, agrando el radar, redistribuyo mejor la interfaz
+dando mas informacion de lo que se visualiza en el radar y en el campo de vision ademas...
+Doy informacion al visor de que hay a los laterales como se puede ver en la imagen 5 
+(La idea al principio era usar unas metaquest)
+
+6) Ya perfeccionada y sincronizada toda la informacion en los logs, los avisos colores, tamaños mas
+grandes de los monigotes dependiendo su distancia. Hay un video en el archivo 7 el cual se ve el
+funcionamiento de esta parte del proyecto
+
+8) Como ya no podia simular mas el entorno 3d en python, utilice el motor grafico unity
+con caja de collisiones, varios scripts en c# (uno de los lenguajes que usa), unos shaders en el,
+object soldiers. Creo el efecto de que
+
+Se generan varios puntos en el radar, y aparecen varios objetos soldiers, por encima hay un objeto
+trasparente el cual con el shader hace que solo se muestre el contorno del rectangulo(podria poner
+la distancia en tiempo real)
+
+9)
+En la imagen 9 se puede ver a los objetos apareciendo y el mapa sensor inacabado, en el video numero 10 se
+puede ver el "juego" / "app" en accion con el mapa sensor terminado y los contornos de los rectangulos
+cambiando de color segun su proximidad
+
+10) He dejado una .apk para el movil porque... No consegui realizar en metaquest el programa. 
+Y creo que era mas util, sencillo y compatible para todos hacerlo en android.
+La idea era tirar de REALIDAD AUMENTADA con la camara de movil android etc Por desgracia mi movil
+no fue compatible y no pude hacer las comprobaciones pertinentes.
+
+Los objetos soldados se harian invisibles en tiempo de ejecucion y solo quedaria el contorno del rectangulo
+en tiempo real.
+El eje en el centro del mapa seriamos nosotros con nuestro movil y... Con un hardware(no llegue a pensar este paso)
+se encargaria de detectar lo que simulamos a nivel algoritmico en el script
